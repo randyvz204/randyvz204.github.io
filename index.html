@@ -1,1 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLearn - Online Learning</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="https://media.istockphoto.com/id/1184299091/vector/mouse-connected-to-a-book-icon-trendy-vector-thin-line-illustration-for-concepts-of-online.jpg?s=612x612&w=0&k=20&c=lm7d-y6L6tj35ETOedsG-hLL1tU9D1FzzRbZ-y3LmaM=" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
 
+        body {
+            background-color: #f4f4f4;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #2c3e50;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: relative;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Custom Leaf Button Section */
+        .navbar-leaf-btn {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .leaf-button {
+            background: #2c3e50;
+            border: 1px solid #f1c40f;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            opacity: 0.1; /* Hidden by default */
+            transition: opacity 0.3s ease, background 0.3s;
+            display: flex;
+            align-items: center;
+            height: 40px;
+            width: 40px;
+            justify-content: center;
+        }
+
+        .leaf-button:hover {
+            opacity: 1;
+            background: #222b38;
+        }
+
+        .leaf-button img {
+            height: 28px;
+            width: 28px;
+            display: block;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            color: #f1c40f;
+        }
+
+        .search-box {
+            background: white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .search-box input {
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        .login-btn {
+            background: #f1c40f;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background: #e67e22;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1696902271695-0031d244cd37?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        /* Course Cards */
+        .courses {
+            display: flex;
+            justify-content: space-around;
+            padding: 40px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+        }
+
+        .course-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .course-card a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .course-card a:hover {
+            color: #f1c40f;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .testimonial {
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: #f1c40f;
+            padding: 40px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta:hover {
+            background: #e67e22;
+        }
+
+        .cta a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        /* Hidden Button */
+        .hidden-button {
+            position: fixed;
+            top: 10px;
+            right: 15px;
+            background: #2c3e50;
+            color: white;
+            border: 1px solid #f1c40f;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            opacity: 0.1;
+            transition: opacity 0.3s ease;
+        }
+
+        .hidden-button:hover {
+            opacity: 1;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .modal input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal button:hover {
+            background-color: #f1c40f;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+
+        @media (max-width: 900px) {
+            .courses {
+                flex-direction: column;
+                align-items: center;
+            }
+            .course-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="navbar-left">
+            <!-- Leaf button styled like the hidden button, triggers openGame() -->
+            <div class="navbar-leaf-btn">
+                <button class="leaf-button" onclick="openGame()" title="Leaf Game">
+                    <img src="https://randyvz205.github.io/images/leaf-autumn-fall-svgrepo-com.svg" alt="Leaf Logo">
+                </button>
+            </div>
+            <div><b>EduLearn</b></div>
+        </div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="/edu/courses.html">Courses</a>
+            <a href="/edu/about.html">About</a>
+        </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search courses...">
+        </div>
+        <a href="#" class="login-btn" onclick="openLoginModal()">Login</a>
+    </div>
+
+    <!-- Hidden Button -->
+    <button class="hidden-button" onclick="openGame()">Hidden Button</button>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        Learn Anytime, Anywhere
+    </div>
+
+    <!-- Courses -->
+    <div class="courses">
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1591439657848-9f4b9ce436b9?q=80&w=1602&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Course">
+            <h3>Introduction to Programming</h3>
+            <p>Learn the basics of Python, Java, and more.</p>
+            <a href="edu/introduction-to-programming.html">Learn More</a>
+        </div>
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1676302440263-c6b4cea29567?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Course">
+            <h3>Advanced Mathematics</h3>
+            <p>Explore calculus, algebra, and problem-solving techniques.</p>
+            <a href="edu/advanced-mathematics.html">Learn More</a>
+        </div>
+        <div class="course-card">
+            <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Course">
+            <h3>World History</h3>
+            <p>Discover the past and how it shapes the present.</p>
+            <a href="edu/world-history.html">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials">
+        <h2>What Our Students Say</h2>
+        <p class="testimonial">"This platform changed how I learn!" - Alex J.</p>
+        <p class="testimonial">"Great courses and easy to use!" - Maria R.</p>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="cta">
+        <a href="#">Start Learning Now!</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        © 2025 EduLearn | <a href="/edu/contact.html">Contact Us</a> | <a href="/edu/privacy.html">Privacy Policy</a>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="validateLogin()">Login</button>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+
+    <script>
+        const correctUsername = "admin";
+        const correctPassword = "password123";
+
+        function openLoginModal() {
+            document.getElementById("loginModal").style.display = "block";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById("loginModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        function validateLogin() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const errorMessage = document.getElementById("errorMessage");
+
+            if (username === correctUsername && password === correctPassword) {
+                errorMessage.textContent = "";
+                openGame();
+                document.getElementById("loginModal").style.display = "none";
+            } else {
+                errorMessage.textContent = "Incorrect username or password.";
+            }
+        }
+
+        function openGame() {
+            var win = window.open("", "_blank", "fullscreen=yes");
+            var url = "https://randyvz205.github.io/leaf.html";
+            var iframe = win.document.createElement('iframe');
+            iframe.style.position = "absolute";
+            iframe.style.top = "0";
+            iframe.style.left = "0";
+            iframe.style.width = "100%";
+            iframe.style.height = "100%";
+            iframe.style.border = "none";
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+
+            win.onbeforeunload = function() {
+                return "Are you sure you want to close the game?";
+            };
+        }
+    </script>
+
+</body>
+</html>
