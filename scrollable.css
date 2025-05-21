@@ -1,0 +1,60 @@
+/* General HTML and Body Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    transition: background 0.5s, color 0.5s;
+    user-select: none; /* Disable text selection */
+}
+
+/* Section Styles */
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Allow sections to stack vertically */
+    background: url('images/background.jpg') no-repeat center center/cover; /* Add your background here */
+    overflow: hidden; /* Prevent scrolling inside the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Back Button Styles */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Leaf Set Positioning */
+.set {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.set div {
+    position: absolute;
+    display: block;
+}

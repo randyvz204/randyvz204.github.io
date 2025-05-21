@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="styles/settings.css">
+</head>
+<body>
+    <button class="back-btn" onclick="window.location.href='index.html'">← Back</button>
+    <div class="save-notification" id="saveNotification">Settings Saved</div>
+
+    <div class="settings-container">
+        <h1>Advanced Settings</h1>
+
+        <!-- Tab Customization Section -->
+        <div class="settings-section">
+            <h2>Tab Customization</h2>
+            <div class="form-group">
+                <label for="tabTitle">Tab Title:</label>
+                <input type="text" id="tabTitle" placeholder="My Awesome Site" maxlength="25">
+                <small id="tabTitleWarning" class="warning-message" style="display: none; color: red;">
+                    Maximum 25 characters allowed.
+                </small>
+            </div>
+            <div class="form-group">
+                <label for="tabIcon">Tab Icon:</label>
+                <select id="tabIcon">
+                    <option value="leafs/images (10).png">Google classroom</option>
+                    <option value="leafs/5968517.png">Google Docs</option>
+                    <option value="leafs/student-vue.png">Student Vue</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Theme Colors Section -->
+        <div class="settings-section">
+            <h2>Theme Colors</h2>
+            <div class="form-group">
+                <label for="primaryColor">Primary Color:</label>
+                <input type="color" id="primaryColor" value="#8B4513">
+            </div>
+            <div class="form-group">
+                <label for="secondaryColor">Secondary Color:</label>
+                <input type="color" id="secondaryColor" value="#A0522D">
+            </div>
+            <div class="form-group">
+                <label for="accentColor">Accent Color:</label>
+                <input type="color" id="accentColor" value="#CD853F">
+            </div>
+        </div>
+
+        <!-- Background Animation Section -->
+        <div class="settings-section" id="animationSection">
+            <h2>Background Animation</h2>
+            <div class="form-group">
+                <label>Select Animation Style:</label>
+                <div class="animation-options">
+                    <div class="animation-option active" data-animation="leaves">
+                        <img src="path/to/leaves.svg" alt="Leaves">
+                        <span>Leaves</span>
+                    </div>
+                    <div class="animation-option" data-animation="snow">
+                        <img src="path/to/snow.svg" alt="Snow">
+                        <span>Snow</span>
+                    </div>
+                    <div class="animation-option" data-animation="bubbles">
+                        <img src="path/to/bubbles.svg" alt="Bubbles">
+                        <span>Bubbles</span>
+                    </div>
+                    <div class="animation-option" data-animation="none">
+                        <img src="path/to/none.svg" alt="None">
+                        <span>None</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reset Settings Button -->
+        <div class="settings-section">
+            <button id="resetSettings" class="reset-btn">Reset to Default</button>
+        </div>
+    </div>
+
+    <script src="scripts/animations.js"></script>
+    <script src="scripts/settings.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaf Animation</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap">
+  <script src="leafs.js"></script>
+  <link rel="stylesheet" type="text/css" href="leafs.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+    .lilita-one-regular {
+        font-family: "Lilita One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(#222, #000);
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        pointer-events: none; /* Disables all interactivity */
+    }
+    section .set div {
+        position: absolute;
+        display: block;
+        width: 10px; /* Default size, will be overridden */
+        height: 10px; /* Default size, will be overridden */
+        background: rgba(0, 255, 0, 0.5); /* Example green color */
+        border-radius: 50%; /* Make them circular */
+    }
+    @keyframes animate {
+        0% {
+            opacity: 0%;
+            top: -10%;
+            transform: translateX(20px) rotate(0deg);
+        }
+        10% {
+            opacity: 1;
+        }
+        20% {
+            transform: translateX(-20px) rotate(45deg);
+        }
+        40% {
+            transform: translateX(-20px) rotate(90deg);
+        }
+        60% {
+            transform: translateX(-20px) rotate(180deg);
+        }
+        80% {
+            transform: translateX(-20px) rotate(180deg);
+        }
+        100% {
+            top: 110%;
+            transform: translateX(-20px) rotate(225deg);
+        }
+    }
+    .set2 {
+        transform: scale(2) rotateY(180deg);
+        filter: blur(2px);
+    }
+    .set3 {
+        transform: scale(0.8) rotateX(180deg);
+        filter: blur(4px);
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2 class="lilita-one-regular">Leaves</h2>
+    <!-- Container for dynamic divs -->
+    <div class="set"></div>
+  </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const setContainer = document.querySelector("section .set");
+
+        // Function to generate a random position on the X-axis
+        function getRandomPosition() {
+            const windowWidth = window.innerWidth;
+            return Math.floor(Math.random() * (windowWidth - 100)); // 100px is a buffer for div width
+        }
+
+        // Function to create a new leaf
+        function createLeaf() {
+            const leaf = document.createElement('div');
+            leaf.classList.add('leaf'); // Optional for extra styling
+            leaf.style.width = `${Math.random() * 5 + 5}vw`; // Random width (5vw to 10vw)
+            leaf.style.height = `${Math.random() * 5 + 5}vw`; // Random height
+            leaf.style.left = `${getRandomPosition()}px`; // Random X position
+            leaf.style.background = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.7)`; // Random color
+            leaf.style.animation = `animate ${Math.random() * 5 + 5}s linear infinite`; // Randomize speed
+
+            // Append to the container
+            setContainer.appendChild(leaf);
+
+            // Remove leaf after animation ends
+            setTimeout(() => {
+                leaf.remove();
+            }, 10000); // Match with longest animation duration
+        }
+
+        // Create new leaves every 500ms
+        setInterval(createLeaf, 500);
+    });
+  </script>
+</body>
+</html>
