@@ -1,0 +1,438 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Basketball Stars | 2 Player Games</title>
+    <meta name="description" content="Play Basketball Stars on 2 Player Games">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="../style.css" as="style">
+    <link rel="stylesheet" href="../style.css">
+<link rel="shortcut icon" href="/img/2small.png" />
+<meta name="robots" content="noindex,nofollow">
+  </head>
+  <body>
+    <div >
+      <div class="wrap-header">
+        <header class="fixed">
+          <div class="container">
+            <nav>
+              <label class="logo">
+                <a href="../index.html" title="2 Player Games">
+                       <img alt="Ready for some friendly competition? Head over to my website and try out our selection of 2 Player Games!" src="../img/2playergames-big.png" width="360" height="160" decoding="async" data-nimg="1" loading="lazy" style="color:transparent">
+                </a>
+              </label>
+            </nav>
+          </div>
+        </header>
+      </div>
+        <div class="container">
+            <div class="game-main">
+              <div class="game-center">
+                <div id="gameLoad" class="game-loading">
+                  <div class="game-play" style="position: relative; z-index: 2;">
+                    <img alt="Basketball Stars" src="https://webglmath.github.io/basketball-stars/logo.png" width="200" height="200" decoding="async" data-nimg="1" class="logo-game" loading="lazy" style="color:transparent">
+                    <span class="game-title">Basketball Stars</span>
+                    <span class="play-button" data-src="https://webglmath.github.io/basketball-stars/" onclick="playGame()" id="playButton">Play now</span>
+                  </div>
+                  <div class="game-bar" id="gameBar">
+                    <span class="game-name">Basketball Stars</span>
+                    <img id="fullScreen" onclick="open_fullscreen()" alt="Basketball Stars" src="../img/fullscreen.jpg" width="60" height="60" decoding="async" data-nimg="1" loading="lazy" style="color:transparent">
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div style="
+                margin-top: 40px;
+                padding-top: 30px;
+                border-top: 0;
+                text-align: center;
+                position: relative;
+                z-index: 1;
+              ">
+                <a href="/index.html" class="cyber-btn" style="
+                  margin-top: 20px;
+                  display: inline-block;
+                  padding: 15px 50px;
+                  color: #fff;
+                  text-decoration: none;
+                  text-transform: uppercase;
+                  font-size: 24px;
+                  font-weight: bold;
+                  font-family: 'Arial', sans-serif;
+                  position: relative;
+                  border: 2px solid #ff6014;
+                  background: #060d25;
+                  box-shadow: 
+                    0 0 10px #ff6014,
+                    inset 0 0 10px #ff6014;
+                  text-shadow: 0 0 5px #ff6014;
+                  overflow: hidden;
+                  transition: all 0.3s;
+                  clip-path: polygon(92% 0, 100% 25%, 100% 75%, 92% 100%, 8% 100%, 0% 75%, 0% 25%, 8% 0);
+                ">
+                  <span class="glitch" data-text="Back to home" style="
+                    position: relative;
+                    display: inline-block;
+                    animation: glitch 3s infinite;
+                  ">Back to home</span>
+                  <span class="cyber-lines" style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: 
+                      linear-gradient(90deg, transparent 50%, rgba(255,96,20,0.1) 50%),
+                      linear-gradient(0deg, transparent 50%, rgba(255,96,20,0.1) 50%);
+                    background-size: 4px 4px;
+                    animation: cyber-bg 0.5s linear infinite;
+                  "></span>
+                </a>
+              </div>
+          <p><strong>Ralated games</strong></p>
+          <div class="list-item">
+            <a href="../game/fastlane-frenzy.html" title="Fastlane frenzy" class="item">
+              <div class="image">
+                <img src="https://bitlifeonline.github.io/fastlane-frenzy/logo.png" width="200" height="200" alt="Fastlane frenzy">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Fastlane frenzy</h3>
+              </div>
+            </a>
+            <a href="../game/fireboy-water-3.html" title="Fireboy watergir 3" class="item">
+              <div class="image">
+                <img src="https://slope-game.github.io/fireboy-water-3/logo.png" width="200" height="200" alt="Fireboy watergir 3">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Fireboy watergir 3</h3>
+              </div>
+            </a>
+            <a href="../game/go-kart-go-ultra.html" title="Go Kart Go Ultra" class="item">
+              <div class="image">
+                <img src="https://ubg77.github.io/edit/go-kart-go-ultra/logo.png" width="200" height="200" alt="Go Kart Go Ultra">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Go Kart Go Ultra</h3>
+              </div>
+            </a>
+            <a href="../game/drunken-boxing-2.html" title="Drunken boxing 2" class="item">
+              <div class="image">
+                <img src="https://slope-game.github.io/drunken-boxing-2/logo.png" width="200" height="200" alt="Drunken boxing 2">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Drunken boxing 2</h3>
+              </div>
+            </a>
+            <a href="../game/ludo-hero.html" title="Ludo Hero" class="item">
+              <div class="image">
+                <img src="https://slope-game.github.io/img/ludo-hero.png" width="200" height="200" alt="Ludo Hero">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Ludo Hero</h3>
+              </div>
+            </a>
+            <a href="../game/money-movers-3.html" title="Money Movers 3" class="item">
+              <div class="image">
+                <img src="https://slope-game.github.io/new3723/money-movers-3/logo.png" width="200" height="200" alt="Money Movers 3">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Money Movers 3</h3>
+              </div>
+            </a>
+            <a href="../game/penalty-kick-online.html" title="Penalty Kick Online" class="item">
+              <div class="image">
+                <img src="https://webglmath.github.io/penalty-kick-online/logo.png" width="200" height="200" alt="Penalty Kick Online">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Penalty Kick Online</h3>
+              </div>
+            </a>
+            <a href="../game/rooftop-snipers.html" title="Rooftop Snipers" class="item">
+              <div class="image">
+                <img src="https://webglmath.github.io/rooftop-snipers/logo.png" width="200" height="200" alt="Rooftop Snipers">
+              </div>
+              <div class="content">
+                <h3 class="heading-game">Rooftop Snipers</h3>
+              </div>
+            </a>
+            </div>
+          <div class="game-desc">
+            <div class="game-desc-left">
+              <style>
+                .stylish-text {
+                    font-size: 16px;
+                    text-align: left;
+                    padding: 50px;
+                    background-color: #060d25;
+                    color: #fff;
+                    border-radius: 20px;
+                    box-shadow: 0 0 20px #ff6014;
+                    transition: transform 0.3s ease-in-out;
+                    line-height: 2.5;
+                }
+                .stylish-text:hover {
+                    transform: scale(1.01);
+                }
+                h1, h2, li {
+              color: rgb(241, 145, 90);
+              font-size: 1.5em;
+                     }
+
+                .ad-sidebar {
+                    position: fixed;
+                    width: 160px;
+                    height: 600px;
+                    background: rgba(6, 13, 37, 0.9);
+                    border: 2px solid #ff6014;
+                    z-index: 999;
+                    backdrop-filter: blur(5px);
+                    box-shadow: 0 0 15px rgba(255, 96, 20, 0.3);
+                    transition: all 0.3s ease;
+                    overflow: hidden;
+                }
+
+                .ad-sidebar::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        90deg,
+                        transparent,
+                        rgba(255, 96, 20, 0.2),
+                        transparent
+                    );
+                    animation: shine 3s infinite;
+                }
+
+                .ad-sidebar::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    border: 2px solid transparent;
+                    background: linear-gradient(45deg, #ff6014, transparent, #ff6014) border-box;
+                    -webkit-mask: 
+                        linear-gradient(#fff 0 0) padding-box,
+                        linear-gradient(#fff 0 0);
+                    mask-composite: exclude;
+                    animation: borderRotate 4s linear infinite;
+                }
+
+                .ad-left {
+      left: 0px;
+      top: 50%;
+      transform: translateY(0%);
+      clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    }
+
+    .ad-right {
+      right: 0px;
+      top: 50%;
+      transform: translateY(0%);
+      clip-path: polygon(0 0, 90% 0, 100% 100%, 10% 100%);
+    }
+
+                .ad-horizontal {
+                    width: 728px;
+                    height: 90px;
+                    margin: 20px auto;
+                    background: rgba(6, 13, 37, 0.9);
+                    border: 2px solid #ff6014;
+                    backdrop-filter: blur(5px);
+                    box-shadow: 0 0 20px rgba(255, 96, 20, 0.2);
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 0.3s ease;
+                    clip-path: polygon(3% 0, 97% 0, 100% 50%, 97% 100%, 3% 100%, 0 50%);
+                }
+
+                .ad-horizontal::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(
+                        90deg,
+                        transparent,
+                        rgba(255, 96, 20, 0.2),
+                        transparent
+                    );
+                    animation: shine 2s infinite;
+                }
+
+                /* Animations */
+                @keyframes shine {
+                    0% {
+                        left: -100%;
+                    }
+                    50%, 100% {
+                        left: 100%;
+                    }
+                }
+
+                @keyframes borderRotate {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(360deg);
+                    }
+                }
+
+                @media (max-width: 1200px) {
+                    .ad-sidebar {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 768px) {
+                    .ad-horizontal {
+                        width: 100%;
+                        height: auto;
+                        min-height: 90px;
+                        clip-path: none;
+                    }
+                }
+
+                @keyframes glitch {
+                  0% {
+                    transform: translate(0);
+                  }
+                  20% {
+                    transform: translate(-2px, 2px);
+                  }
+                  40% {
+                    transform: translate(-2px, -2px);
+                  }
+                  60% {
+                    transform: translate(2px, 2px);
+                  }
+                  80% {
+                    transform: translate(2px, -2px);
+                  }
+                  100% {
+                    transform: translate(0);
+                  }
+                }
+
+                @keyframes cyber-bg {
+                  0% {
+                    background-position: 0 0;
+                  }
+                  100% {
+                    background-position: 4px 4px;
+                  }
+                }
+
+                .cyber-btn:hover {
+                  transform: scale(1.05);
+                  box-shadow: 
+                    0 0 20px #ff6014,
+                    inset 0 0 20px #ff6014;
+                  text-shadow: 0 0 10px #ff6014;
+                }
+
+                .cyber-btn:before {
+                  content: '';
+                  position: absolute;
+                  top: 0;
+                  left: -100%;
+                  width: 100%;
+                  height: 100%;
+                  background: linear-gradient(
+                    120deg,
+                    transparent,
+                    rgba(255,96,20,0.4),
+                    transparent
+                  );
+                  transition: 0.5s;
+                }
+
+                .cyber-btn:hover:before {
+                  left: 100%;
+                }
+            </style>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="game-desc">
+<footer class="footer section">
+  <div class="ft-img"></div>
+    <div class="container">
+      <div class="ft-menu">
+        <div class="ft-links">
+          <div class="ft-copyright">
+            <span>
+              <p style="text-align:center;color:#fff">
+                <strong>Copyright © 2024 2 Player Games. All Rights Reserved</strong>
+                <br>
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+</footer>
+
+<!-- Left Sidebar Ad -->
+  <div class="ad-container ad-sidebar ad-left">
+    <div id="ad-left">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136533182122624" crossorigin="anonymous"></script>
+      <!-- 160x600 -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:160px;height:600px"
+           data-ad-client="ca-pub-8136533182122624"
+           data-ad-slot="1899107624"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+
+  <!-- Right Sidebar Ad -->
+  <div class="ad-container ad-sidebar ad-right">
+    <div id="ad-right">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136533182122624" crossorigin="anonymous"></script>
+      <!-- 160x600 -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:160px;height:600px"
+           data-ad-client="ca-pub-8136533182122624"
+           data-ad-slot="1899107624"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+  </div>
+</div>
+
+<div class="ad-horizontal">
+  <script
+    async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8136533182122624"
+    crossorigin="anonymous"
+  ></script>
+  <!-- 728x90 -->
+  <ins
+    class="adsbygoogle"
+    style="display:inline-block;width:728px;height:90px"
+    data-ad-client="ca-pub-8136533182122624"
+    data-ad-slot="2557583171"
+  ></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
+<!-- Thêm script khởi tạo quảng cáo -->
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</body>
+  <script src="../js/script.js"></script>
+</html>
+

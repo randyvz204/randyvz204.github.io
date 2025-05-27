@@ -1,0 +1,17 @@
+{
+"companyName": "RHM Interactive",
+"productName": "Funny Ragdoll Wrestlers",
+"productVersion": "0.1",
+"dataUrl": "FunnyRagdollWrestlers_GD.data.unityweb",
+"wasmCodeUrl": "FunnyRagdollWrestlers_GD.wasm.code.unityweb",
+"wasmFrameworkUrl": "FunnyRagdollWrestlers_GD.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "FunnyRagdollWrestlers_GD.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.4.28f1"
+}
